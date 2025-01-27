@@ -1,6 +1,6 @@
 {
   "name": "animationapi",
-  "version": "0.1.2",
+  "version": "0.1.0",
   "description": "AnimationAPI API Wrapper",
   "main": "lib/animationapi.js",
   "types": "lib/animationapi.d.ts",
