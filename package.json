@@ -1,0 +1,33 @@
+{
+  "name": "animationapi",
+  "version": "0.1.2",
+  "description": "AnimationAPI API Wrapper",
+  "main": "lib/animationapi.js",
+  "types": "lib/animationapi.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Anshul Kumar <anshulkumar@adyotatech.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anshul360/animationapi-node.git"
+  },
+  "bugs": "https://github.com/anshul360/animationapi-node/issues",
+  "engines": {
+    "node": ">=18.*"
+  },
+  "dependencies": {
+    "@types/node": "^22.10.10",
+    "base64url": "^3.0.1",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.12",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "@typescript-eslint/parser": "^8.21.0",
+    "eslint": "^9.19.0",
+    "eslint-plugin-import": "^2.31.0",
+    "typescript": "^5.7.3"
+  }
+}
