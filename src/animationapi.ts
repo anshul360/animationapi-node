@@ -15,7 +15,7 @@ export interface Image {
   created_at: string;
   uid: string;
   public_url: string;
-  type: "jpeg" | "png" | "webp";
+  format: "jpeg" | "png" | "webp";
   quality?: number;
   pixel_ratio?: number;
   modifications: any[] | null;
@@ -23,20 +23,20 @@ export interface Image {
   metadata: any[] | null;
 }
 
-export interface Status {
-  status: "pending" | "in_progress" | "completed";
-  status_url: string;
-  asset_url?: string;
-}
-
 export interface Animation {
   template_id: string;
   created_at: string;
   uid: string;
   public_url: string;
-  type: "webm" | "mp4" | "gif";
+  format: "webm" | "mp4" | "gif";
   modifications: any[] | null;
   metadata: any[] | null;
+}
+
+export interface Status {
+  status: "pending" | "in_progress" | "completed";
+  status_url: string;
+  asset_url?: string;
 }
 
 export interface Account {
