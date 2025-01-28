@@ -83,12 +83,12 @@ export class AnimationAPI {
     return this.api.get(`/images${queryString.length > 0 ? `?` + queryString.join('&') : '' }`) as Promise<Image[]>
   }
 
-  public async create_image(uid: string, params: CreateImageParams, synchronous: boolean = false): Promise<Image> {
+  public async create_image(uid: string, params: CreateImageParams, synchronous: boolean = false): Promise<Status> {
     if (synchronous) {
-      return this.syncApi.post('/images', { ...params, template: uid }) as Promise<Image>
+      return this.syncApi.post('/images', { ...params, template: uid }) as Promise<Status>
     }
 
-    return this.api.post('/images', { ...params, templateId: uid }) as Promise<Image>
+    return this.api.post('/images', { ...params, templateId: uid }) as Promise<Status>
   }
   
   public async get_animation(uid: string): Promise<Animation> {
@@ -101,8 +101,8 @@ export class AnimationAPI {
     return this.api.get(`/animations${queryString.length > 0 ? `?` + queryString.join('&') : '' }`) as Promise<Animation[]>
   }
 
-  public async create_animation(uid: string, params: CreateAnimationParams): Promise<Animation> {
-    return this.api.post('/animations', { ...params, animation_template: uid }) as Promise<Animation>
+  public async create_animation(uid: string, params: CreateAnimationParams): Promise<Status> {
+    return this.api.post('/animations', { ...params, animation_template: uid }) as Promise<Status>
   }
 
   public async generate_signed_url(base_id: string, modifications: any, synchronous = false): Promise<string> {
